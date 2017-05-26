@@ -13,7 +13,7 @@ const session    = require('express-session');
 const passport   = require('passport');
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Final-Proyectdb');
+mongoose.connect('mongodb://localhost/Final-Proyectdb').then(()=>console.log("Connected to DB"));
 
 
 const passportSetup = require('./config/passport');
